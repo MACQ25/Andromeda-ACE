@@ -66,10 +66,6 @@ main{
 }
 
 @media only screen and (max-width: 500px){
-    
-    /*Teacher, i've tried, you can comment out the following code and it
-    will not change anything, I do not know how but it is either already
-    responsive or I am not understanding something*/
 
     #stateLoss{
         display: initial;
