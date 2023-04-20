@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andromeda Ace</title>
+
+    <link rel="stylesheet" href="assign4.css">
+    <script src="assign4.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/title.png" alt="Name of the game: Andromeda ACE">
+    </header>
+    <main>
+        <audio id="dmg" src="sfx/takingDmg1.mp3"></audio>
+        <audio id="slugga" src="sfx/shootFX.mp3"></audio>
+        <audio autoplay loop id="backSFX" src="sfx/backgroundFX.mp3"></audio>
+        <div id="notLost">
+            <p>Your ship has gone down!</p>
+            <p id="pointsFin">You scored:</p>
+            <button id="resetButton">try again</button>
+        </div>
+        <svg viewBox="0 0 801 651" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="images/xplosion.png" x="0" y="0" width="85" height="85" id="death" display="none"></image>
+            <polygon id="ship1" points="375,575 400,560 425,575 400,525" stroke="black" stroke-width="1" fill="yellow"/>
+        </svg>
+
+        <div id="playerInfo">
+            <div>
+                <p id="lifeC">Lives: </p>
+                <img src="images/speshep.png" alt="lifeCountImage">
+            </div>
+            <div>
+                <p id="misC">Ammo: </p>
+                <img src="images/missiles.png" alt="countOfMissiles">
+            </div>
+            <div id="asteroidCount">
+                <p>Input the number of asteroids</p>
+                <input type="text" id="asterInp">
+            </div>
+            <div id="pointBox">
+                <p>Your highest score is:</p>
+                <p id="highScore">0</p>
+                <p>You currently have: </p>
+                <p id="pointC">0 points</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

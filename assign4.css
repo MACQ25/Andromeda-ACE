@@ -1,0 +1,92 @@
+body{
+    background-image: url(images/galaxyBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    text-align: center;
+    align-items: center;
+}
+
+#playerInfo{
+    border: 1px solid white;
+    background-color: black;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 3fr;
+}
+
+#playerInfo div{
+    margin: 10px;
+}
+
+#pointBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#notLost{
+    display: none;
+}
+
+#stateLoss{
+    display: initial;
+    border: 3px white solid;
+    background-color: rgb(197, 225, 250);
+    padding: 10px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    right: 40%;
+    left: 40%;
+}
+
+
+#svg1{
+    margin: auto;
+    align-self: center;
+    border: 5px solid white;
+    width: 800px;
+    height: 650px;
+}
+
+.aster{
+    fill: white;
+    stroke: white;
+}
+
+@media only screen and (max-width: 500px){
+    
+    /*Teacher, i've tried, you can comment out the following code and it
+    will not change anything, I do not know how but it is either already
+    responsive or I am not understanding something*/
+
+    #stateLoss{
+        display: initial;
+        border: 3px white solid;
+        background-color: red;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    #svg1{
+        width: 200px;
+        height: 700px;
+    }
+
+    body{
+        background-image: url(images/galaxyBackground.jpg);
+        background-repeat: repeat-y;
+    }
+}
