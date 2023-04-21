@@ -123,6 +123,7 @@ let projecID = 0;
  *              there's a getElementById associated with it to display this amount
  */
 window.addEventListener("load", function () {
+  this.document.body.style.zoom = "65%";
   let playing = true;
   let ship1 = document.getElementById("ship1");
   var ship1Cop = " " + ship1.getAttribute("points");
@@ -141,7 +142,14 @@ window.addEventListener("load", function () {
   let playerHurt;
   let ammoCount = 10;
   document.getElementById("misC").innerHTML += ammoCount;
-  this.document.getElementById("backSFX").play();
+
+  let backFX = document.createElement('audio');
+  document.body.appendChild(backFX);
+  backFX.src = "sfx/backgroundFX.mp3";
+  backFX.id = "backSFX";
+  backFX.autoplay = 'true';
+  backFX.loop = 'true';
+
 
   /** 
    * Function used to move the ship across the map, it also changes the current location of the point
@@ -432,6 +440,7 @@ window.addEventListener("load", function () {
     (Event) => {
       var code1 = Event.code;
       if(playing){
+          backFX.play();
           switch (code1) {
             case "KeyW":
               ship1Mov("Top");
